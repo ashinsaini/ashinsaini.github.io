@@ -1,0 +1,24 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1015&q=80"); }
+
+.preset, .adminpreset {
+  background-color: #476b6b;
+  padding: 2px 10px 10px 20px;
+  border: 5px; }
+
+.preset {
+  border: 3px solid #ffcc00; }
+
+.adminpreset {
+  border: 3px solid #ff1a1a;
+  color: #ff1a1a; }
+
+h1 {
+  text-align: center;
+  color: #ffcc00;
+  font-family: titillium; }
+
+div ol {
+  color: #ffcc00; }
+
+/*# sourceMappingURL=style.css.map */
