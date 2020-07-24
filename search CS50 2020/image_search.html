@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <head>
+        <title>Search CS50 2020</title>
+    </head>
+    <header>
+      <nav>
+        <span style="float:left">
+        <a href="index.html"><b>Home</b></a>
+        </span>
+        <div>
+          <span style="float:right">
+            <a style="padding:0 20px" href="advanced_search.html"><b>Advanced Search</b></a>
+          </span>
+        </div>
+      </nav>
+    </header>
+    <body>
+      <div class="container-center">
+          <img style="padding-left:185px" src="camera-icon.png" alt="icon">
+        <p id="center-title">Image Search</p>
+      <form action="https://www.google.ca/search" method="get" name="f">
+            <input type="hidden" name="hl" value="en">
+            <input type="hidden" name="tbm" value="isch">
+            <input type="hidden" name="sclient" value="img">
+            <input class="round-corner" type="text" name="q" size="50"><br><br>
+             <div id="button-center">
+            <button class="button-search" type="submit">Search</button>
+            </div>
+        </form>
+      </div>
+    </body>
+    <footer class="footer">
+      <nav>
+        <span class="footer-span"></span>
+          <a id="footer-links" href="https://www.google.com/doodles">Doodles</a>
+          <a id="footer-links" href="https://www.google.com/search/howsearchworks/?fg=1">About</a>
+          <a id="footer-links" href="www.reddit.com">Reddit</a>
+      </nav>
+    </footer>
+</html>

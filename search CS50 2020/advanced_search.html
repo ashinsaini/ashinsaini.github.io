@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="search.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8">
+    <title>Advanced Search CS50 2020</title>
+  </head>
+  <header style="background-color:#d9d9d9">
+    <nav class="navbar navbar-expand-sm">
+      <span>
+      <a href="index.html"><b>Home</b></a>
+      </span>
+      <div class="navbar-collapse justify-content-end">
+        <span>
+        <a style="padding:0 20px" href="image_search.html"><b>Image</b></a>
+        </span>
+      </div>
+  </header>
+  <body>
+    <div>
+      <header class="sub-header">
+        <b style="color:#660000">Advanced Search</b>
+      </header>
+    </div>
+    <div style="padding:80px">
+      <div class="row">
+        <div style="margin:0 0 30px" class="col-md-5">
+          <b>Combine or use different search elements:</b>
+        </div>
+        <div id="adv-format" class="col-md-6">
+            <b>Input these terms into the search box:</b>
+        </div>
+      </div>
+    <form action="https://www.google.com/search" method="get">
+      <div class="row">
+          <div class="col-md-2">
+                <label>all these words:</label>
+          </div>
+          <div class="col-md-3">
+                <input id="adv-input" type="text" name="as_q" size="50"><br><br>
+          </div>
+          <div id="adv-format" class="col-md-3">
+            Important words e.g. park concert period
+          </div>
+        </div>
+      <div class="row">
+          <div class="col-md-2">
+                <label>this exact word or phrase:</label>
+          </div>
+          <div class="col-md-3">
+                <input id="adv-input" type="text" name="as_epq" size="50"><br><br>
+          </div>
+          <div id="adv-format" class="col-md-3">
+            Exact words in quotes e.g. "park concert period"
+          </div>
+        </div>
+      <div class="row">
+          <div class="col-md-2">
+                <label>any of these words:</label>
+          </div>
+          <div class="col-md-3">
+                <input id="adv-input" type="text" name="as_oq" size="50"><br><br>
+          </div>
+          <div id="adv-format" class="col-md-3">
+          Put OR between any words e.g. park OR theme
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-md-2">
+              <label>none of these words:</label>
+        </div>
+        <div class="col-md-3">
+              <input id="adv-input" type="text" name="as_eq" size="50"><br><br>
+        </div>
+        <div id="adv-format" class="col-md-4">
+          Add a minus sign (-) for words you want to exclude e.g. -water, -dog
+        </div>
+       </div>
+      <div style="" class="row">
+        <div class="col-md-4">
+          </div>
+        <div style="padding:0 9px" class="col-md-2">
+              <input id="adv-search" value="Advanced Search" type="submit"></input>
+        </div>
+      </div>
+    </form>
+  </div>
+ </body>
+ <footer class="footer">
+   <nav>
+     <span class="footer-span"></span>
+       <a id="footer-links" href="https://www.google.com/doodles">Doodles</a>
+       <a id="footer-links" href="https://www.google.com/search/howsearchworks/?fg=1">About</a>
+       <a id="footer-links" href="www.reddit.com">Reddit</a>
+   </nav>
+ </footer>
+</html>

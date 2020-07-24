@@ -1,0 +1,128 @@
+
+
+  #button-center {
+                position: absolute;
+                top: 110%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+              }
+
+  #center-title {
+                text-align: center;
+                font-size: 50px;
+                color:#333300;
+              }
+
+  #adv-input {
+            height: 34px;
+            border-radius: 3px;
+            border: 2px solid #DDD;
+            border-top:1px solid #8c8c8c;
+
+              }
+
+  #adv-input:focus {
+            border: 2px solid #4d94ff;
+            box-shadow: inset 0 3px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+  }
+
+  #adv-search {
+            background-color: #0066ff;
+            border:none;
+            padding:8px 25px;
+            color: white;
+            border-radius:3px;
+            font-size: 16px;
+  }
+
+  #adv-search:hover {
+            background-color:#0052cc;
+  }
+
+  #adv-format {
+          color:#808080;
+          font-size:13px;
+          padding-left:50px;
+  }
+
+  #footer-links {
+          padding-left:10px;
+          color:#333300;
+  }
+
+  #footer-links:hover {
+            color:#808000;
+  }
+
+  div.container-center {
+                margin: 0;
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+
+  .button-search {
+            background-color: #e6e6e6;
+            font-size:14px;
+            border:none;
+            padding:12px 30px;
+            color: #595959;
+            border-radius:5px;
+
+          }
+
+  .button-search:hover {
+            border: 1px solid #737373;
+            color:#333333;
+            box-shadow: 0 0px 5px 0 rgba(0,0,0,0.2), 0 3px 5px 0 rgba(255,26,255,.5);
+          }
+
+  .round-corner {
+            border-radius:100px;
+            padding:0px 0px 0px 30px;
+            height:48px;
+            font-size:19px;
+          }
+
+  .round-corner:hover {
+            box-shadow: 0 0px 5px 0 rgba(0,0,0,0.2), 0 3px 5px 0 rgba(51,51,51,.5);
+          }
+
+  .sub-header {
+            border-bottom: 2px solid red;
+            margin:20px;
+
+  }
+
+  .footer{
+    position: fixed;
+    border-top: 1px solid gray;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    background-color:#d9d9d9;
+    padding-bottom:40px;
+  }
+
+  .footer-span {
+    padding-left: 20px;
+    color:#333300;
+
+
+  }
+  span a {
+            color:#333300;
+            margin:0 0 0 10px;
+        }
+  span a:hover {
+            color:#808000;
+        }
+  nav {
+            padding:10px 0px 0px 10px;
+  }
+
+  header {
+          padding:12px;
+  }
