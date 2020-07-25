@@ -1,11 +1,12 @@
 $modern_color: #476b6b;
 $yellow:  #ffcc00;
 $admincolor: #ff1a1a;
-$background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1015&q=80');
+$background-oldimage: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1015&q=80');
+$background-current: url('luke-chesser-IGtutkXikuc-unsplash.jpg');
 
 %standardbackgrnd {
-  background-image: $background-image;
-
+  background-image: $background-current;
+  position:relative;
 }
 
 %standardbox {
@@ -27,15 +28,44 @@ $background-image: url('https://images.unsplash.com/photo-1557683316-973673baf92
 
 body {
   @extend %standardbackgrnd;
+  position:relative;
 }
-
+head{
+  float:none;
+  background-color: #fff;
+  padding:25px;
+}
 h1 {
   text-align: center;
   color: $yellow;
-  font-family: titillium;
+  font-family: courier,arial,helvetica;
+  text-shadow: 2px 2px white;
 }
 div{
   ol{
     color:$yellow;
+  }
+}
+footer{
+    background-color:#333;
+    position: relative;
+    bottom:auto;
+    height: 200px;
+    margin-top: 100px;
+    clear:both;
+    padding:20px;
+}
+nav{
+  overflow:hidden;
+  background-color: #333;
+div{
+    a{
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
   }
 }

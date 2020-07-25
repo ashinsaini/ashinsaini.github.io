@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style media="screen">
       #bimage{
@@ -13,55 +13,49 @@
         font-weight: bold;
         font-family: 'tangerine', serif;
       }
-      p {
+      #lastp{
+        font-size:50px;
+        font-family: warning;
+        color: #476b6b;
+      }
+      .center{
         text-align:center;
-        color:
       }
-      h1.center{
-        text-align:center;
-      }
-      @keyframes wheelHueColor {
-          from, to { color: rgb(236,100,75); }
-          10%      { color: rgb(219,10,91); }
-          20%      { color: rgb(174,168,211); }
-          30%      { color: rgb(89,171,227); }
-          40%      { color: rgb(37,116,169); }
-          50%      { color: rgb(3,201,169); }
-          60%      { color: rgb(22,160,133); }
-          70%      { color: rgb(233,212,96); }
-          80%      { color: rgb(243,156,18); }
-          90%      { color: rgb(236,240,241); }
-      }
-      .example {
-    color: rgb(236,100,75);
-    animation: wheelHueColor 20s infinite;
-    text-align: center;
-    font-size: 80px;
-    margin-top: 25vh;
-    transform: translateY(-50%);
-  }
-    #bottom {
-    margin-bottom: auto;
-  }
-    #lastp{
-      font-size:50px;
-      font-family: warning;
-      color: #476b6b;
+      .button-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10px;
+}
+    p {
+      text-align:center;
+      color:
+    }
+    footer{
+        background-color:gray;
+        position: relative;
+        height: 200px;
+        margin-top: 100px;
+        clear:both;
     }
     </style>
-      <h1 id = "header" class = "center w3-container w3-black">Let's keep moving! Thanks to Bootstrap 4</h1>
       <title>The Story goes on</title>
   </head>
+
   <body id = "bimage">
-        <div>
-        <p class = "w3-container w3-red allerta-stencil">This a great example of imported stylesheets.  Brought to you by</p>
-        <p class = "example">This is a test of animations in CSS</p>
+      <h1 id = "header" class = "center w3-container w3-black">Let's keep moving!</h1>
+        <div class= "container">
+        <p class = "w3-container w3-red allerta-stencil">This a great example of imported stylesheets.  Brought to you by Bootstrap 4</p>
         <p id = "lastp">In our upcoming pages we will utilize CMSS and make more dynamic styling examples</p>
+        <p style = "color:purple; font-size:40px;">We will be doing a portfolio page for a potential business</p>
         </div>
-        <br><br>
-  </body>
+        <div class="button-center">
+          <button type="button" class="btn btn-primary" name="button"><a href="project0pg3.html">Go Forward!</a></button>
+          </div>
+        <div style="overflow:auto; padding-bottom:300px;">
+        </div>
       <footer>
-        <div id= "bottom" class = "fixed bottom">
+        <div style = "padding: 20px;">
           <ul class = "pagination justify-content-center">
             <li class = "page-item"><a class = "page-link" href = "index.html">Previous</a></li>
             <li class = "page-item"><a class = "page-link" href = "index.html">1</a></li>
@@ -73,4 +67,6 @@
           </ul>
         </div>
       </footer>
+    </div>
+  </body>
 </html>

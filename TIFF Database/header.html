@@ -18,7 +18,7 @@ session_start();
     <header>
      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
          <a class="header-logo" href="https://www.tiff.net">
-         <img src="logo-white.png" width="100" height= "70" alt="logo">    
+         <img src="logo-white.png" width="100" height= "70" alt="logo">
          </a>
          <ul class= navbar-nav>
              <li>
@@ -28,8 +28,8 @@ session_start();
              <li class= "nav-item"><a class="nav-link" href="https://www.tiff.net/about">About Us</a></li>
              <li class="nav-item"><a class="nav-link" href="https://tiff.net/membership">Join</a></li>
          </ul>
-         <?php 
-          
+         <?php
+
     if (isset($_SESSION['userUid'])) {
         echo  '<form class = "navbar-collapse justify-content-end" action="includes/logout.inc.php" method="post">
              <button type="submit" name="logout-submit">Logout</button>
@@ -41,12 +41,12 @@ session_start();
              <input type="password" name= "pwd" placeholder="Enter Password">
              <button type="submit" name= "login-submit">Login</button>
             </form>
-         <a class="nav-link" href="signup.php">Signup</a>';   
+         <a class="nav-link" href="signup.php">Signup</a>';
     }
-         ?>      
-           
-         
-     </nav>   
+         ?>
+
+
+     </nav>
     </header>
 </body>
 </html>
