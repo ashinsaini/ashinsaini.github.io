@@ -1,0 +1,22 @@
+
+#footer{
+    display: flex;
+    position: fixed;
+    border-top: 1px solid gray;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    background-color:#d9d9d9;
+    padding-bottom:40px;
+  }
+
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+
+  

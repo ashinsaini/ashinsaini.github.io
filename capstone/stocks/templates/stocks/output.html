@@ -1,0 +1,52 @@
+{% extends "stocks/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+<br><br>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <h3><p id="symbol">{{ symbol }}</p></h3>       
+        <h2><b id="output">${{ output }}</b></h2>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        <button style="margin-right: 10px;" class="btn btn-warning" id="btn_5">1 Week</button>
+        <button style="margin-right: 10px;" class="btn btn-warning" id="btn_30">1 Month</button>
+        <button style="margin-right: 10px;" class="btn btn-warning" id="btn_90">3 Months</button>
+        <button style="margin-right: 10px;" class="btn btn-warning" id="btn_180">6 Months</button>
+        <button class="btn btn-warning" id="btn_365">1 Year</button>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div id = "Chart" class="col-md-8">
+        <canvas id="myChart"></canvas> 
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <b id="lin_regress">Lin Regres</b>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <a href="/stocks">back to query</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'stocks/stocks.js' %}"></script>
+{% endblock %}

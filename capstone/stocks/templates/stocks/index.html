@@ -1,0 +1,67 @@
+{% extends "stocks/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="height:175px; margin-top: 90px">
+        <b><h1>Input your stock ticker symbol:</h1></b>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-3">
+<form action="{% url 'symbol' %}" method="post">
+    {% csrf_token %}
+    <div class="search-input" style=" background: #fff;
+         display: flex;
+         border: 1px solid #dfe1e5;
+         box-shadow: none;
+         border-radius: 24px;
+         z-index: 3;
+         height: 85px;
+         margin: 0 auto;
+         margin-left:30px">
+    <input style= "background-color: transparent;
+    border: none;
+    word-wrap: break-word;
+    display: flex;
+    flex: 100%;
+    color: transparent;
+    margin-right:50px;
+    height: 80px;
+    font-size: 16px;
+    padding-left:7px;" type="text" name="symbol" placeholder="Stock ticker e.g. 'AAAA'">
+    </div>
+  <br><br>
+    <input style="margin-left:200px" class="btn btn-primary" type="submit" value="Submit">
+</form>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="height: 200px">
+
+    </div>
+</div>
+<br><br>
+
+<!--
+    <div class = "row">
+        <div class="col-md-1"></div>
+            <div class="col-md-4">
+      <textarea name="question" id="question_box" cols="30" rows="10"></textarea>
+      <br>
+      <input type="submit" id="question_submit" class="btn btn-primary" value="Answer">
+  </div>
+  <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+          <div id="response"></div>
+      </div>
+  </div>-->
+</div>
+{% endblock %}
+    {% block footer %}
+    {% endblock %}
+
