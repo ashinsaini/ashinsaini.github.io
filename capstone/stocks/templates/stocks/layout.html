@@ -6,51 +6,39 @@
 <head>
     <title>Stocks web</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--React libraries-->
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <link rel="icon" href="{% static '/images/twitter-icon-14-256.png'%}" type="image/png">
+    <!---->
+    <link rel="icon" href="{% static '/images/Graph-Icon.png'%}" type="image/png">
+    <link href="{% static '/stocks/stock.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
-    {% block script %}
-    {% endblock %}
+    {% block head %}{% endblock %}
+    {% block script %}{% endblock %}
 </head>
+<!--https://codepen.io/mutedblues/pen/MmPNPG-->
+   <header class="header">
+    <a href="{% url 'index' %}" class="logo">Stock Web</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      {% if user.is_authenticated %}
+      <li><a id = "username" href="##"><img src="{{ superuser.avatar.url }}" style="height:40px; width:40px; border-radius:20%"><strong style="padding-left:5px">{{ superuser.username }}</strong></a></li>
+      <li><a href="{% url 'logout' %}">Log Out</a></li>
+      {% else %}
+      <li><a href="{% url 'register' %}">Register</a></li>
+      <li><a href="{% url 'login' %}">Log In</a></li>
+      {% endif %}
+    </ul>
+  </header>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'index' %}">Stock web</a>
-        <div style="width:80%"></div>
-          <ul class="navbar-nav mr-auto">
-            {% if user.is_authenticated %}
-              <li>
-                <img src="{{ superuser.avatar.url }}" style="height:40px; width:40px; border-radius:20%">
-              </li>    
-            <li style="float:right">
-                    <a class="nav-link" id = "username" href="##"><strong>{{ superuser.username }}</strong></a>
-                </li>
-            {% endif %}
-            {% if user.is_authenticated %}
-            <li style="float:right" class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-            </li>
-        {% else %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Log In</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'register' %}">Register</a>
-            </li>
-        {% endif %}
-            </ul>
-    </nav>
-    <div class="body">
-           <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Quotes</span></a> by TradingView</div>
+  <!-- TradingView Widget BEGIN -->
+    <div>
+        <div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
         {
         "symbols": [
@@ -82,10 +70,11 @@
       }
         </script>
       </div>
+      </div>
+      <hr>
       <!-- TradingView Widget END --> 
         {% block body %}
         {% endblock %}
-    </div>
 </body>
 <footer>
     <hr>
@@ -95,4 +84,5 @@
         {% endblock %}
 
 </footer>
+
 </html>

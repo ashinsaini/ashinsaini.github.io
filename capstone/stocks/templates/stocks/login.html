@@ -2,12 +2,21 @@
 
 {% block body %}
 
-    <h2>Login</h2>
-
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-1" style="padding-top: 20px;">
+                <h2>Login</h2>
+            </div>
+        </div>
+   
+</div>
+    <br>
     {% if message %}
         <div>{{ message }}</div>
     {% endif %}
-
+    <div class="container">
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
@@ -18,7 +27,15 @@
         </div>
         <input class="btn btn-primary" type="submit" value="Login">
     </form>
+    <br>
+   <p>Don't have an account? <a href="{% url 'register' %}"> Register here.</a></p>
 
-    Don't have an account? <a href="{% url 'register' %}">Register here.</a>
+</div>
+  
+    <div class="row">
+        <div class="col-md-12" style="height: 300px">
+    
+        </div>
+    </div>
 
 {% endblock %}
